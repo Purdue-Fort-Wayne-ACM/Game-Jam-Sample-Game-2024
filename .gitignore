@@ -361,3 +361,11 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Assets/Scripts/Extras
+/Assets/TextMesh Pro
+/Builds
+/Library
+/ProjectSettings
+/Temp
+/UserSettings
+/Assets/Resources/Sprites/COM-MACH-V-WGD-RGB_1.png
