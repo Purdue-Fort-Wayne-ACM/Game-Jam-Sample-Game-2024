@@ -4,7 +4,7 @@ public class MainMenuUIController : MonoBehaviour {
 
     #region Methods
     public void OnStartGame() {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        // TODO
     }
 
     public void OnExitGame() {
@@ -12,8 +12,7 @@ public class MainMenuUIController : MonoBehaviour {
     }
 
     public void OnMainMenu() {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
-        Engine.IsModal = false;
+        // TODO
     }
     #endregion
 
@@ -32,7 +31,7 @@ public class MainMenuUIController : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.GetComponent<Player>() != null) {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+            // TODO
         }
     }
     #endregion

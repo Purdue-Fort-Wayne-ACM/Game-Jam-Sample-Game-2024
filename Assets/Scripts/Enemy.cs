@@ -31,6 +31,10 @@ public class Enemy : MonoBehaviour {
     #endregion
 
     #region Methods
+    /// <summary>
+    /// This will calculate if the player is to the left or right of the enemy
+    /// </summary>
+    /// <returns>TRUE if the player is to the left, FALSE if the player is to the right</returns>
     bool PlayerToLeft() { return Vector3.Dot(Vector3.Cross(transform.position, PlayerPosition.position), Vector3.forward) < 0; }
     #endregion
 
@@ -50,7 +54,7 @@ public class Enemy : MonoBehaviour {
         Enraged = Vector2.Distance(transform.position, PlayerPosition.position) < Aggression;
 
         if (Enraged) {
-            Rb.velocity = new Vector2((PlayerToLeft() ? -1 : 1) * Speed, Rb.velocity.y);
+            // TODO
             if (transform.rotation.z == 0)
                 transform.Rotate(0, 0, PlayerToLeft() ? 15 : -15);
         } else {
@@ -62,17 +66,8 @@ public class Enemy : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
 
         if (Engine.IsModal) return;
-
-        if (collision.gameObject.GetComponent<Player>() != null) {
-            Health -= collision.gameObject.GetComponent<Player>().AttackStrength;
-            collision.GetComponent<Rigidbody2D>().velocity = ThrowbackIntensity;
-        }
-        if (Health <= 0) {
-            //Game Win
-            Debug.Log("Game Won!");
-            FindObjectOfType<MainMenuUIController>().EndGameScreens[1].SetActive(true);
-            Engine.IsModal = true;
-        }
+        
+        // TODO
     }
 
     #endregion

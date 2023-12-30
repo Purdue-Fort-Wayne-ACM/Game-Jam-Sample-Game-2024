@@ -30,34 +30,14 @@ public class Player : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
-        if (Engine.IsModal) return;
-        
-        Rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * Speed, Rb.velocity.y);
-
-        if (Input.GetButtonDown("Jump") && !IsJumping) {
-            IsJumping = true;
-            Rb.velocity = new Vector2(Rb.velocity.x, JumpIntensity);
-        }
-
-        IsJumping = Rb.velocity.y != 0;
-
+        // TODO
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         
         if (Engine.IsModal) return;
 
-        if (collision.gameObject.GetComponent<Enemy>() != null) {
-            Health -= collision.GetComponent<Enemy>().AttackStrength;
-            Rb.velocity = collision.GetComponent<Enemy>().ThrowbackIntensity;
-        }
-        if (Health <= 0) {
-            //Game Over
-            Debug.Log("Game Loss");
-            FindObjectOfType<MainMenuUIController>().EndGameScreens[0].SetActive(true);
-            Engine.IsModal = true;
-        }
+        // TODO
     }
     #endregion
 }
