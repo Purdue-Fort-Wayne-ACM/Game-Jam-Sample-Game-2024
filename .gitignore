@@ -74,7 +74,6 @@ StyleCopReport.xml
 *_p.c
 *_h.h
 *.ilk
-*.meta
 *.obj
 *.iobj
 *.pch
@@ -369,3 +368,5 @@ FodyWeavers.xsd
 /Temp
 /UserSettings
 /Assets/Resources/Sprites/COM-MACH-V-WGD-RGB_1.png
+/Assets/Resources/Sprites/COM-MACH-V-WGD-RGB_1.png.meta
+/Assets/Scripts/Extras.meta
